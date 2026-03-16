@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext';
 import { useTelemetry } from '../context/TelemetryContext';
 
 // API base URL
-const API_URL = "https://ecoscorer-production.up.railway.app/api";
+const API_URL = "https://joyful-stillness-production-c573.up.railway.app/api";
 
 const LeaderboardPage = () => {
     const { user } = useAuth();

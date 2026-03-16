@@ -5,7 +5,7 @@ import GlassCard from '../components/ui/GlassCard';
 import NeonButton from '../components/ui/NeonButton';
 
 // API URL
-const API_URL = "https://ecoscorer-production.up.railway.app/api";
+const API_URL = "https://joyful-stillness-production-c573.up.railway.app/api";
 
 const ProfilePage = () => {
     const { user, logout, updateUser } = useAuth();

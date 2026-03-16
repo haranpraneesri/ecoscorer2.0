@@ -11,10 +11,10 @@ import threading
 
 # Cloud URL (after deploying to Railway)
 # Example: "https://ecoscorer-production.up.railway.app"
-SERVER_URL = "https://ecoscorer-production.up.railway.app"
+SERVER_URL = "https://joyful-stillness-production-c573.up.railway.app"
 
 # Your EcoScorer account info
-YOUR_USER_ID = 3             # ← Your user ID from registration
+YOUR_USER_ID = 1             # ← Your user ID from registration
 YOUR_EMAIL = "sri@gmail.com"
 YOUR_NAME = "sri"
 
