@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Use Space Blue background as default */
+    --background: 247 50% 9%; /* #0A0A23 converted to HSL approx */
+    --foreground: 210 40% 98%;
+
+    --card: 247 50% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 247 50% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Neon Cyan Primary */
+    --primary: 180 100% 50%;
+    --primary-foreground: 247 50% 9%;
+
+    /* Electric Purple Secondary */
+    --secondary: 271 76% 53%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 247 30% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 152 100% 50%; /* Matrix Green */
+    --accent-foreground: 247 50% 9%;
+
+    --destructive: 345 100% 63%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 247 30% 20%;
+    --input: 247 30% 20%;
+    --ring: 180 100% 50%;
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 247 50% 9%;
+    --foreground: 210 40% 98%;
+
+    --card: 247 50% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 247 50% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 247 50% 9%;
+
+    --secondary: 271 76% 53%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 247 30% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 152 100% 50%;
+    --accent-foreground: 247 50% 9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 247 30% 20%;
+    --input: 247 30% 20%;
+    --ring: 180 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-neon-cyan/30 selection:text-neon-cyan;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(157, 78, 221, 0.15) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 20%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism */
+  .glass {
+    @apply bg-space-light/20 backdrop-blur-md border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+  }
+
+  /* Neon Borders */
+  .neon-border {
+    @apply border border-transparent bg-gradient-to-r from-neon-cyan/50 to-neon-purple/50 bg-clip-border;
+  }
+
+  .neon-shadow {
+    @apply shadow-[0_0_10px_rgba(0,255,255,0.3)];
+  }
+
+  .neon-shadow-purple {
+    @apply shadow-[0_0_10px_rgba(157,78,221,0.3)];
+  }
+
+  /* Floating Card Effect */
+  .floating-card {
+    @apply transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(0,255,255,0.2)];
+  }
+    
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-neon-cyan to-neon-purple;
+  }
+}
