@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Use cloud API for all requests
-const API_BASE_URL = 'https://ecoscorer-production.up.railway.app/api';
+const API_BASE_URL = 'https://joyful-stillness-production-c573.up.railway.app/api';
 
 const api = axios.create({
     baseURL: API_BASE_URL,
